@@ -1,5 +1,6 @@
 package com.teksystems.coffeeShop;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class MainMenu {
@@ -54,15 +55,14 @@ public class MainMenu {
                 default:
                     System.out.println("Invalid menu selection.");
             }
-
         }
     }
 
     private void showCoffeeShopMenu() {
         System.out.println("=========================");
         System.out.println("Coffee Shop Menu");
-        MenuItem[] menu = tcs.getMenu();
-        for(MenuItem item : menu) {
+        List<MenuItem> menu = tcs.getMenu();
+        for (MenuItem item : menu) {
             System.out.println(item);
         }
     }

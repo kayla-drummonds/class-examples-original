@@ -1,11 +1,29 @@
 package com.teksystems.coffeeShop;
 
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class CoffeeShop {
 
     private String name = "Kayla's coffee shop";
-    private MenuItem[] menu = new MenuItem[0];
+    private MenuItem[] menu = new MenuItem[] {
+            new MenuItem("orange juice", "drink", 2.13),
+            new MenuItem("lemonade", "drink", 0.85),
+            new MenuItem("cranberry juice", "drink", 3.36),
+            new MenuItem("pineapple juice", "drink", 1.89),
+            new MenuItem("lemon iced tea", "drink", 1.28),
+            new MenuItem("apple iced tea", "drink", 1.28),
+            new MenuItem("vanilla chai latte", "drink", 2.48),
+            new MenuItem("hot chocolate", "drink", 0.99),
+            new MenuItem("iced coffee", "drink", 1.12),
+            new MenuItem("tuna sandwich", "food", 0.95),
+            new MenuItem("ham and cheese sandwich", "food", 1.35),
+            new MenuItem("bacon and egg", "food", 1.15),
+            new MenuItem("steak", "food", 3.28),
+            new MenuItem("hamburger", "food", 1.05),
+            new MenuItem("cinnamon roll", "food", 1.05) };;
     private String[] orders = new String[0];
 
     public CoffeeShop() {
@@ -17,25 +35,16 @@ public class CoffeeShop {
         this.menu = menu;
         this.orders = orders;
     }
-    
-    public MenuItem[] getMenu() {
-        menu = new MenuItem[] {
-                new MenuItem("orange juice", "drink", 2.13),
-                new MenuItem("lemonade", "drink", 0.85),
-                new MenuItem("cranberry juice", "drink", 3.36),
-                new MenuItem("pineapple juice", "drink", 1.89),
-                new MenuItem("lemon iced tea", "drink", 1.28),
-                new MenuItem("apple iced tea", "drink", 1.28),
-                new MenuItem("vanilla chai latte", "drink", 2.48),
-                new MenuItem("hot chocolate", "drink", 0.99),
-                new MenuItem("iced coffee", "drink", 1.12),
-                new MenuItem("tuna sandwich", "food", 0.95),
-                new MenuItem("ham and cheese sandwich", "food", 1.35),
-                new MenuItem("bacon and egg", "food", 1.15),
-                new MenuItem("steak", "food", 3.28),
-                new MenuItem("hamburger", "food", 1.05),
-                new MenuItem("cinnamon roll", "food", 1.05) };
-        return menu;
+
+    public List<MenuItem> getMenu() {
+        List<MenuItem> list = Arrays.asList(menu);
+        Collections.sort(list, new Comparator<MenuItem>() {
+            @Override
+            public int compare(MenuItem p1, MenuItem p2) {
+                return p1.getItem().compareTo(p2.getItem());
+            }
+        });
+        return list;
     }
 
     public String addOrder(String name) {
@@ -56,17 +65,17 @@ public class CoffeeShop {
             return "This item is currently unavailable!";
         }
     }
-    
+
     public String removeOrderItem(String removeItemName) {
         int index = 0;
-        for( ; index <= orders.length - 1; index++) {
+        for (; index <= orders.length - 1; index++) {
             String orderItemName = orders[index];
-            if(orderItemName.equals(removeItemName)) {
+            if (orderItemName.equals(removeItemName)) {
                 orders[index] = null;
                 break;
             }
         }
-        for( ; index < orders.length - 2; index++) {
+        for (; index < orders.length - 2; index++) {
             orders[index] = orders[index + 1];
         }
         orders = Arrays.copyOfRange(orders, 0, orders.length - 1);
