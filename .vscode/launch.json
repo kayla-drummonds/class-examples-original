@@ -1,0 +1,91 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch AutoPromoteTest",
+            "request": "launch",
+            "mainClass": "com.teksystems.AutoPromoteTest",
+            "projectName": "class-examples"
+        },
+        {
+            "type": "java",
+            "name": "Launch AutoTypeConversion",
+            "request": "launch",
+            "mainClass": "com.teksystems.AutoTypeConversion",
+            "projectName": "class-examples"
+        },
+        {
+            "type": "java",
+            "name": "Launch ControlFlow",
+            "request": "launch",
+            "mainClass": "com.teksystems.ControlFlow",
+            "projectName": "class-examples"
+        },
+        {
+            "type": "java",
+            "name": "Launch Day1",
+            "request": "launch",
+            "mainClass": "com.teksystems.Day1",
+            "projectName": "class-examples"
+        },
+        {
+            "type": "java",
+            "name": "Launch Day2",
+            "request": "launch",
+            "mainClass": "com.teksystems.Day2",
+            "projectName": "class-examples"
+        },
+        {
+            "type": "java",
+            "name": "Launch Day3",
+            "request": "launch",
+            "mainClass": "com.teksystems.Day3",
+            "projectName": "class-examples"
+        },
+        {
+            "type": "java",
+            "name": "Launch ExplicitTest",
+            "request": "launch",
+            "mainClass": "com.teksystems.ExplicitTest",
+            "projectName": "class-examples"
+        },
+        {
+            "type": "java",
+            "name": "Launch IfStatements",
+            "request": "launch",
+            "mainClass": "com.teksystems.IfStatements",
+            "projectName": "class-examples"
+        },
+        {
+            "type": "java",
+            "name": "Launch MathDemo",
+            "request": "launch",
+            "mainClass": "com.teksystems.MathDemo",
+            "projectName": "class-examples"
+        },
+        {
+            "type": "java",
+            "name": "Launch Operators",
+            "request": "launch",
+            "mainClass": "com.teksystems.Operators",
+            "projectName": "class-examples"
+        },
+        {
+            "type": "java",
+            "name": "Launch Variables",
+            "request": "launch",
+            "mainClass": "com.teksystems.Variables",
+            "projectName": "class-examples"
+        }
+    ]
+}
